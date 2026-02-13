@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobix</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <!-- Link de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link dos ícones do fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="shadow-sm">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar-brand">
+            <img class="brand" src="assets/logo.png" alt="Logo" />
+          </div>
+          <ul class="navbar-menu">
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link">Página Inicial</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#services" class="navbar-link">Serviços</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#about" class="navbar-link">Sobre</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#contact" class="navbar-link">Contato</a>
+            </li>
+          </ul>
+          <div class="navbar-actions">
+            <button type="button" class="btn btn-toggler btn-icon shadow-sm">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <a
+              href="https://web.whatsapp.com/"
+              target="_blank"
+              class="btn btn-link btn-icon shadow"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="container">
+          <div class="main-content">
+            <div class="section-heading">
+              <h1 class="section-title">
+                Antecipe seu Salário e Ganhe Bônus de Boas-Vindas
+              </h1>
+              <p class="section-subtitle">
+                Selecionei as melhores instituições que oferecem crédito rápido,
+                antecipação salarial e
+                <strong
+                  class="highlight"
+                  style="font-weight: bold; color: white"
+                  >bônus em dinheiro</strong
+                >
+                ao se cadastrar.
+              </p>
+            </div>
+
+            <div class="benefits">
+              <article class="benefit">
+                <div class="benefit-header">
+                  <i class="fa fa-check-circle benefit-icon"></i>
+                  <h3 class="benefit-title">Aprovação em minutos</h3>
+                </div>
+                <p class="benefit-description">
+                  Cadastro 100% digital pelo celular
+                </p>
+              </article>
+
+              <article class="benefit">
+                <div class="benefit-header">
+                  <i class="fa fa-check-circle benefit-icon"></i>
+                  <h3 class="benefit-title">Bônus Garantido</h3>
+                </div>
+                <p class="benefit-description">
+                  Receba dinheiro direto na conta ao se cadastrar
+                </p>
+              </article>
+
+              <article class="benefit">
+                <div class="benefit-header">
+                  <i class="fa fa-check-circle benefit-icon"></i>
+                  <h3 class="benefit-title">Sem Burocracia</h3>
+                </div>
+                <p class="benefit-description">
+                  Análise automática e liberação rápida
+                </p>
+              </article>
+
+              <!-- Button -->
+              <a href="#services" class="btn btn-light" id="home-btn">
+                <i class="fa-solid fa-coins btn-icon"></i>
+                <span class="inner-text"> Ver Aplicativos </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="image-wrapper">
+            <img
+              src="assets/hero.jpg"
+              alt="Banner de crédito digital"
+              class="hero"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="container">
+          <div class="titles-wrapper">
+            <h2 class="section-title">Melhores Apps de Crédito e Bônus</h2>
+            <p class="section-subtitle">
+              Escolha o aplicativo ideal para você e comece a ganhar agora mesmo
+            </p>
+          </div>
+          <div class="cards-wrapper">
+            <!-- CARD FACIO -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-image">
+                  <img src="assets/facio.png" alt="" />
+                </div>
+                <div class="card-title-wrapper">
+                  <h3 class="card-title">Facio – Crédito e Benefícios</h3>
+                  <p class="card-description">
+                    Startup focada em crédito consignado digital.
+                  </p>
+                </div>
+              </div>
+              <!-- CARD DETAIL -->
+              <article id="card-detail-facio" class="card-detail">
+                <p class="card-detail-about">
+                  <strong>O que é:</strong> Plataforma de crédito consignado
+                  digital.
+                </p>
+                <p class="card-detail-services">
+                  <strong>Serviços:</strong> Empréstimos com desconto em folha,
+                  gestão simplificada.
+                </p>
+                <p class="card-detail-public">
+                  <strong>Público-alvo:</strong> Empresas e colaboradores.
+                </p>
+              </article>
+              <!-- Action Button -->
+              <div class="card-footer card-actions">
+                <button
+                  id="btn-facio"
+                  data-card="card-detail-facio"
+                  class="btn btn-outlined"
+                >
+                  Saber mais...
+                </button>
+                <a
+                  href="https://facio.com.br"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Cadastre-se</a
+                >
+              </div>
+            </div>
+            <!-- CARD JEITTO -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-image">
+                  <img src="assets/jeitto.jpg" alt="" />
+                </div>
+                <div class="card-title-wrapper">
+                  <h3 class="card-title">Jeitto – Crédito Rápido</h3>
+                  <p class="card-description">
+                    Mais uma das Alternativas para o cartão de crédito.
+                  </p>
+                </div>
+              </div>
+              <!-- CARD DETAIL -->
+              <article id="card-detail-jeitto" class="card-detail">
+                <p class="card-detail-about">
+                  <strong>O que é:</strong> Crédito emergencial sem burocracia.
+                </p>
+                <p class="card-detail-service">
+                  <strong>Serviços:</strong> Pagamento de contas, recarga de
+                  celular.
+                </p>
+                <p class="card-detail-public">
+                  <strong>Público-alvo:</strong> Pessoas sem cartão ou conta
+                  bancária.
+                </p>
+              </article>
+              <!-- Action Button -->
+              <div class="card-footer card-actions">
+                <button
+                  id="btn-jeitto"
+                  data-card="card-detail-jeitto"
+                  class="btn btn-outlined"
+                >
+                  Saber mais...
+                </button>
+                <a
+                  href="https://jeitto.com.br"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Cadastre-se</a
+                >
+              </div>
+            </div>
+
+            <!-- Card PicPay -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-image">
+                  <img
+                    src="assets/picpay.png"
+                    alt="Logo Picpay"
+                    class="card-image"
+                  />
+                </div>
+
+                <div class="card-title-wrapper">
+                  <h3 class="card-title">PicPay – Carteira Digital</h3>
+                  <p class="card-description">
+                    Pagamentos, transferências e investimentos.
+                  </p>
+                </div>
+              </div>
+              <article id="card-detail-picpay" class="card-detail">
+                <p class="card-detail-about">
+                  <strong>O que é:</strong> Uma das maiores carteiras digitais
+                  do Brasil.
+                </p>
+                <p class="card-detail-service">
+                  <strong>Serviços:</strong> Pagamento de boletos,
+                  transferências, cashback.
+                </p>
+                <p class="card-detail-public">
+                  <strong>Público-alvo:</strong> Consumidores digitais que
+                  buscam praticidade.
+                </p>
+              </article>
+              <div class="card-footer card-actions">
+                <button
+                  id="btn-picpay"
+                  data-card="card-detail-picpay"
+                  class="btn btn-outlined"
+                >
+                  Saber mais...
+                </button>
+                <a
+                  href="https://picpay.com"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Cadastre-se</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- TIP -->
+          <div class="tip container">
+            <p class="tip-text">
+              <strong>Dica:</strong> Você pode se cadastrar em todos os
+              aplicativos e acumular os bônus! Quanto mais aplicativos usar,
+              mais dinheiro você recebe.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="titles-wrapper">
+            <h2 class="section-title">Por que usar esses links?</h2>
+            <p class="section-subtitle">
+              Conectamos você com as melhores oportunidades de crédito do
+              mercado
+            </p>
+          </div>
+          <!-- Security -->
+          <div class="cards-wrapper">
+            <div class="card about-card">
+              <div class="card-header">
+                <div class="card-icon-wrapper">
+                  <i class="fa-solid fa-shield icon-blue card-icon"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Segurança</h3>
+                <p class="card-subtitle">
+                  Apenas instituições autorizadas pelo Banco Central.
+                </p>
+              </div>
+            </div>
+            <!-- Delivery -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon-wrapper">
+                  <i class="fa-solid fa-clock card-icon icon-green"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Rapidez</h3>
+                <p class="card-subtitle">
+                  Cadastro feito em menos de 5 minutos pelo celular.
+                </p>
+              </div>
+            </div>
+            <!-- Gains -->
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon-wrapper">
+                  <i class="fa-solid fa-wallet card-icon icon-purple"></i>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Dinheiro no bolso</h3>
+                <p class="card-subtitle">
+                  Além do crédito, você ganha o bônus de indicação direto na
+                  conta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT -->
+      <section id="contact">
+        <nav class="navbar container">
+          <div class="navbar-wrapper">
+            <!-- Marca -->
+            <div class="navbar-brand titles-wrapper">
+              <h2 class="section-title">Gainapp</h2>
+              <p class="section-subtitle">
+                Conectamos você com as melhores oportunidades de crédito e bônus
+                do mercado brasileiro.
+              </p>
+            </div>
+            <!-- Links Rápidos -->
+            <div class="fast-links">
+              <h3 class="contact-heading">Links Rápidos</h3>
+              <ul class="navbar-menu">
+                <li class="navbar-item">
+                  <a href="#home" class="navbar-link">Página Inicial</a>
+                </li>
+                <li class="navbar-item">
+                  <a href="#services" class="navbar-link">Aplicativos</a>
+                </li>
+                <li class="navbar-item">
+                  <a href="#about" class="navbar-link">Sobre</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Redes sociais -->
+            <div class="social-media">
+              <h3 class="contact-heading">Siga-nos nas Redes Sociais</h3>
+              <ul class="navbar-menu">
+                <li class="navbar-item">
+                  <a href="https://www.instagram.com/" class="navbar-link">
+                    <div class="icon-wrapper">
+                      <i class="fa-brands fa-square-instagram navbar-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li class="navbar-item">
+                  <a href="https://www.tiktok.com/" class="navbar-link">
+                    <div class="icon-wrapper">
+                      <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <p class="navbar-subtitle">
+                Compartilhe seus resultados e marque a gente!
+              </p>
+            </div>
+          </div>
+        </nav>
+        <div class="tip container">
+          <p class="tip-text">
+            ⚠️ <strong>Aviso Legal:</strong> Este site é um hub de indicações.
+            As aprovações de crédito dependem da análise de cada instituição
+            financeira. Todas as instituições aqui listadas são autorizadas pelo
+            Banco Central do Brasil. Os bônus estão sujeitos às regras e termos
+            de cada aplicativo.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- CONTACT -->
+    <footer class="footer">
+      <!-- Copyright -->
+      <div class="copyright">
+        <span> &copy; 2026 Mobix. Todos os direitos reservados. </span>
+        <p>
+          Desenvolvido com 💚 para ajudar você a ter acesso facilitado ao
+          crédito.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

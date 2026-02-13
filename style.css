@@ -1,0 +1,785 @@
+:root {
+    /* Paleta principal */
+    --color-primary: #0634a6;
+    --color-primary-light: #3567b6;
+    --color-primary-dark: #05228d;
+    --color-text-primary: #04040c;
+    --color-text-secondary: #ddd;
+    --color-white: #fff;
+    --color-gray: #eee;
+    --color-black: #000;
+    --color-bg-light: #ebecf1;
+    --color-border: #534C46;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    --gradient-contact: linear-gradient(45deg, #0F52BA 0%, #08295e 100%);
+    --gradient-footer: linear-gradient(180deg, #0F52BA 0%, #08295e 100%);
+    --gradient-icon: linear-gradient(90deg, #B0C4DE 0%, #E6E6FA 100%);
+    ;
+    ;
+
+    /* Sombras */
+    --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    --shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
+    /* Espaçamentos */
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    background-color: transparent;
+    overflow-x: hidden;
+}
+
+p {
+    opacity: 0;
+}
+
+
+/* LINKS */
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* LAYOUT */
+.container {
+    margin: 0 auto;
+    padding: var(--space-md);
+}
+
+/* BUTTONS */
+.btn {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: transform 300ms ease;
+}
+
+.btn-icon {
+    padding: var(--space-xs);
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow);
+    transition: 300ms ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}
+
+.btn-primary,
+.btn-outlined {
+    padding: 8px 12px;
+}
+
+.btn-light {
+    box-shadow: var(--shadow-sm);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+/* MOBILE FIRST */
+/* ===========================
+   HEADER
+   =========================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-height: 70px;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow);
+}
+
+/* Navbar principal */
+header .navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    top: -15px;
+}
+
+/* Marca / Logo */
+header .navbar-brand {
+    width: 70px;
+    height: 70px;
+    box-sizing: content-box;
+    object-fit: cover;
+    object-position: center;
+}
+
+header .navbar-brand img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Menu de navegação */
+header .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 800ms ease, opacity 800ms ease;
+}
+
+header .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    max-height: 300px;
+    opacity: 1;
+    margin: 0;
+    padding: var(--space-md);
+    background-color: var(--color-white);
+}
+
+/* Itens do menu */
+header .navbar-item {
+    list-style-type: none;
+}
+
+header .navbar-link {
+    padding: var(--space-sm);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-neutral-dark);
+    /* corrigido: antes estava var(--space-md) */
+}
+
+header .navbar-link:hover {
+    color: var(--color-primary);
+}
+
+/* Ações extras no header */
+header .navbar-actions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* Botão toggler (hamburger) */
+header .btn-toggler {
+    border: 1px solid var(--color-border);
+    color: var(--color-neutral-dark);
+    box-shadow: var(--shadow);
+}
+
+/* Botão de link destacado */
+header .btn-link {
+    background-color: green;
+    color: var(--color-white);
+}
+
+/* MAIN ajustado para compensar header fixo */
+main {
+    margin-top: 70px;
+}
+
+/* SECTION */
+section {
+    margin: 0;
+}
+
+/* HOME */
+/* HOME */
+#home {
+    background: var(--gradient-primary);
+    padding: var(--space-md);
+}
+
+/* Cabeçalho da seção */
+#home .section-heading {
+    text-align: start;
+}
+
+/* Títulos e ícones */
+#home .section-title,
+#home .benefit-title {
+    color: var(--color-white);
+}
+
+#home .section-subtitle,
+#home .benefit-icon,
+#home .benefit {
+    color: var(--color-gray);
+}
+
+/* Lista de benefícios */
+#home .benefits {
+    display: flex;
+    flex-direction: column;
+}
+
+#home .benefit-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--space-xs);
+}
+
+#home .benefit-description {
+    margin-left: 24px;
+    margin-top: -8px;
+    color: var(--color-paragraph);
+}
+
+/* Botão principal da Home */
+#home-btn {
+    margin: var(--space-md) 0;
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-md);
+    text-align: center;
+}
+
+/* Imagem principal */
+#home .image-wrapper {
+    max-height: 200px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#home .hero {
+    width: 100%;
+    height: 100%;
+    border: 8px solid transparent;
+    /* corrigido: antes estava apenas 'border: 8px' */
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===========================
+   SERVICES
+   =========================== */
+#services {
+    background-color: var(--color-background-light);
+}
+
+/* Títulos da seção */
+#services .titles-wrapper {
+    text-align: center;
+}
+
+/* Container de cards */
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+/* Card padrão */
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-sm);
+    border-radius: var(--space-xs);
+    background: var(--color-white);
+    box-shadow: var(--shadow);
+}
+
+/* Cabeçalho e corpo do card não interativos */
+#services .card-header,
+#services .card-body {
+    pointer-events: none;
+}
+
+/* Botões no rodapé do card continuam interativos */
+.card-footer .btn {
+    pointer-events: auto;
+}
+
+/* Imagem do card */
+.card-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Detalhes expansíveis do card */
+.card-detail {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.card-detail.expanded {
+    max-height: 600px;
+    /* ajuste conforme o conteúdo */
+    opacity: 1;
+}
+
+/* Rodapé do card */
+.card-footer {
+    display: flex;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+}
+
+/* Dica/Tip destacada */
+.tip {
+    margin: var(--space-lg) auto;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+}
+
+.tip-text {
+    color: var(--color-gray);
+    text-align: center;
+}
+
+/* ABOUT */
+.icon-blue {
+    color: blue;
+}
+
+.icon-green {
+    color: green;
+}
+
+.icon-purple {
+    color: purple;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.text-light {
+    color: white;
+}
+
+/* ===========================
+   ABOUT
+   =========================== */
+#about {
+    background-color: #f9f9f9;
+}
+
+/* Títulos e alinhamento central */
+#about .titles-wrapper,
+#about .card,
+#about .icon-wrapper {
+    text-align: center;
+}
+
+/* Card da seção About */
+#about .card {
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ícone dentro do card */
+.card-icon-wrapper {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ícone estilizado */
+.card-icon {
+    font-size: 40px;
+}
+
+/* ===========================
+   CONTACT & FOOTER
+   =========================== */
+
+/* Fundo em gradiente para contato e rodapé */
+#contact,
+footer {
+    background: linear-gradient(45deg, #0F52BA 0%, #08295e 100%);
+}
+
+/* Seção de contato */
+#contact {
+    padding: var(--space-md);
+    text-align: center;
+}
+
+/* Títulos */
+#contact .titles-wrapper {
+    text-align: center;
+}
+
+#contact .section-title,
+.contact-heading {
+    color: var(--color-white);
+}
+
+#contact .section-subtitle,
+#contact .navbar-subtitle {
+    color: var(--color-gray);
+}
+
+/* Menu de navegação dentro do contato */
+#contact .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#contact .navbar-link {
+    color: var(--color-gray);
+}
+
+#contact .fast-links .navbar-link:hover {
+    color: var(--color-white);
+}
+
+#contact .social-media .navbar-menu {
+    flex-direction: row;
+}
+
+/* Ícones sociais */
+#contact .icon-wrapper {
+    background: var(--gradient-icon);
+    transition: 300ms ease-out;
+    padding: 12px;
+    border-radius: 50%;
+    color: var(--color-black);
+    box-shadow: var(--shadow);
+}
+
+/* Dicas dentro da seção de contato */
+#contact .tip {
+    padding: 12px;
+    text-align: justify;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: var(--space-md);
+    background-color: var(--color-primary-dark) !important;
+}
+
+.footer span,
+.footer p {
+    color: var(--color-gray);
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+
+/* Rotação infinita */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Entradas verticais */
+@keyframes slide-in-bottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-bottom {
+    animation: slide-in-bottom .5s ease forwards;
+}
+
+@keyframes slide-in-top {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-top {
+    animation: slide-in-top .5s ease forwards;
+}
+
+/* Entradas horizontais */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation: slide-in-left 1s ease forwards;
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    animation: slide-in-right .5s ease forwards;
+}
+
+/* Animações aplicadas na HOME */
+#home .benefit:nth-child(1) {
+    animation: slide-in-left .5s ease forwards;
+}
+
+#home .benefit:nth-child(2) {
+    animation: slide-in-left 1s ease forwards;
+}
+
+#home .benefit:nth-child(3) {
+    animation: slide-in-left 1.5s ease forwards;
+}
+
+#home .image-wrapper {
+    animation: slide-in-right 2s ease forwards;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+    .container {
+        padding: var(--space-sm);
+    }
+
+    /* HEADER */
+    header .navbar {
+        gap: var(--space-md);
+    }
+
+    header .navbar-menu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        max-height: none;
+        opacity: 1;
+    }
+
+    header .navbar-list {
+        flex-direction: row;
+    }
+
+    header .btn-toggler {
+        display: none;
+    }
+
+    /* esconde hamburguer */
+
+    /* HOME */
+    #home .btn {
+        max-width: 200px;
+    }
+
+    /* SERVICES */
+    #services .cards-wrapper {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .card {
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .card:nth-child(2) {
+        align-self: flex-end;
+        align-items: end;
+        justify-items: end;
+    }
+
+    #services .card-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: var(--space-md);
+    }
+
+    #services .card-image {
+        object-fit: cover;
+        object-position: center;
+        width: 80px;
+        height: 80px;
+    }
+
+    #services .card-detail {
+        max-height: 600px;
+        /* ajuste conforme o conteúdo */
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+
+    #services .card-actions .btn-outlined {
+        display: none;
+    }
+
+    #services .card-actions:nth-child(2) {
+        align-self: center;
+    }
+
+    /* ABOUT */
+    #about .card {
+        width: 300px;
+        height: 300px;
+    }
+
+    #about .card:nth-child(1) {
+        align-self: flex-start;
+    }
+
+    #about .card:nth-child(2) {
+        align-self: flex-end;
+    }
+
+    #about .card:nth-child(3) {
+        align-self: flex-start;
+    }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+    .container {
+        padding: var(--space-md);
+    }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+    .container {
+        padding: var(--space-lg);
+    }
+
+    /* HOME em grid */
+    #home .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+    }
+
+    #home .image-wrapper {
+        height: 100%;
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+/* X-Large devices (≥1200px) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 40px;
+    }
+
+    header .navbar {
+        top: -35px;
+    }
+}
+
+/* XX-Large devices (≥1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
